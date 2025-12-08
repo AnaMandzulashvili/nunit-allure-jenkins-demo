@@ -1,23 +1,29 @@
-using NUnit.Framework;
+using NUnit.Allure.Core;
+using NUnit.Allure.Attributes;
+using Allure.Net.Commons;
 
-namespace AllureJenkinsGit.Tests
+namespace AllureJenkinsGit
 {
+    [AllureNUnit]
+    [TestFixture]
+    [AllureSuite("Calculator Tests")]
+    [AllureDisplayIgnored]
     public class CalculatorTests
     {
-        [SetUp]
-        public void Setup()
+        [Test]
+        [AllureTag("Regression")]
+        [AllureOwner("Ana")]
+        [AllureSubSuite("Addition")]
+        public void AddTest()
         {
-            // Runs before each test
+            int result = Add(2, 3);
+            Assert.AreEqual(5, result);
         }
 
-        [Test]
-        public void Add_TwoNumbers_ReturnsCorrectSum()
+        [AllureStep("Adding {0} and {1}")]
+        public int Add(int a, int b)
         {
-            int a = 5;
-            int b = 3;
-            int result = a + b;
-
-            Assert.That(result, Is.EqualTo(8));
+            return a + b;
         }
     }
 }
