@@ -16,14 +16,14 @@ namespace AllureJenkinsGit
         [AllureOwner("Ana")]
         public void AddTest()
         {
-            //int result = Add(2, 3);
-            //Assert.AreEqual(5, result);
+            int result = Add(2, 3);
+            Assert.AreEqual(5, result);
         }
 
-        //[AllureStep("Adding {0} and {1}")]
-        //public int Add(int a, int b)
-        //{
-        //    return a + b;
-        //}
+       
+        public int Add(int a, int b)
+        {
+            return a + b;
+        }
     }
 }
