@@ -1,5 +1,4 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
 	<PropertyGroup>
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -7,9 +6,9 @@
 		<IsPackable>false</IsPackable>
 		<IsTestProject>true</IsTestProject>
 	</PropertyGroup>
-
 	<ItemGroup>
-		<PackageReference Include="Allure.NUnit" Version="2.12.1" />
+		<PackageReference Include="Allure.Net.Commons" Version="2.14.1" />
+		<PackageReference Include="Allure.NUnit" Version="2.14.1" />
 		<PackageReference Include="Allure.Reqnroll" Version="2.14.1" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
 		<PackageReference Include="NUnit" Version="3.14.0" />
@@ -20,25 +19,20 @@
 		<PackageReference Include="Reqnroll.NUnit" Version="3.2.1" />
 		<PackageReference Include="Reqnroll.Tools.MsBuild.Generation" Version="3.2.1" />
 	</ItemGroup>
-
 	<ItemGroup>
 		<Using Include="NUnit.Framework" />
 	</ItemGroup>
-
 	<ItemGroup>
 		<None Update="allureConfig.json">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
-
 	<ItemGroup>
-	  <Folder Include="Future\" />
+		<Folder Include="Future\" />
 	</ItemGroup>
-
 	<ItemGroup>
 		<None Update="screenshot.png">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
-
 </Project>
