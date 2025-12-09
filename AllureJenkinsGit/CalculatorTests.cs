@@ -13,7 +13,7 @@ namespace AllureJenkinsGit
         [AllureSubSuite("Addition")]
         [AllureOwner("Ana")]
         [Description("Test to verify addition of two numbers")]
-        public void AddTest()
+        public void AddTestViaNunit()
         {
             int firstNumber = SetFirstNumber(2);
             int secondNumber = SetSecondNumber(3);
