@@ -4,10 +4,10 @@ using NUnit.Allure.Attributes;
 
 namespace AllureJenkinsGit
 {
-    [AllureNUnit]
+   
     [TestFixture]
     [AllureSuite("Calculator Tests")]
-    [AllureDisplayIgnored]
+    // Remove [AllureDisplayIgnored] from here
     public class CalculatorTests
     {
         [Test]
@@ -20,7 +20,6 @@ namespace AllureJenkinsGit
             Assert.AreEqual(5, result);
         }
 
-       
         public int Add(int a, int b)
         {
             return a + b;
