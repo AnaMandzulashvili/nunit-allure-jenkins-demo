@@ -1,0 +1,5 @@
+<RunSettings>
+  <NUnit>
+    <AssemblyLoadMode>LoadReferencedAssemblies</AssemblyLoadMode>
+  </NUnit>
+</RunSettings>

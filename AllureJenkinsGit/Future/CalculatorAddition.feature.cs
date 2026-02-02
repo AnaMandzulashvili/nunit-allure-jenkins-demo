@@ -20,14 +20,26 @@ namespace AllureJenkinsGit.Future
     [global::NUnit.Framework.TestFixtureAttribute()]
     [global::NUnit.Framework.DescriptionAttribute("CalculatorAddition")]
     [global::NUnit.Framework.FixtureLifeCycleAttribute(global::NUnit.Framework.LifeCycle.InstancePerTestCase)]
+    [global::NUnit.Framework.CategoryAttribute("Regression")]
+    [global::NUnit.Framework.CategoryAttribute("Smoke")]
+    [global::NUnit.Framework.CategoryAttribute("Epic:Calculator")]
+    [global::NUnit.Framework.CategoryAttribute("Feature:Addition")]
+    [global::NUnit.Framework.CategoryAttribute("Story:BasicMath")]
+    [global::NUnit.Framework.CategoryAttribute("Severity:critical")]
     public partial class CalculatorAdditionFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
-        private static string[] featureTags = ((string[])(null));
+        private static string[] featureTags = new string[] {
+                "Regression",
+                "Smoke",
+                "Epic:Calculator",
+                "Feature:Addition",
+                "Story:BasicMath",
+                "Severity:critical"};
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "Future", "CalculatorAddition", null, global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "Future", "CalculatorAddition", "    As a user\r\n    I want to add two numbers\r\n    So that I can get the sum", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
         
 #line 1 "CalculatorAddition.feature"
 #line hidden
@@ -118,7 +130,7 @@ namespace AllureJenkinsGit.Future
             global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add two numbers via BDD", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 3
+#line 7
 this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
@@ -128,16 +140,16 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 4
+#line 8
     await testRunner.GivenAsync("I have entered 2 into the calculator", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 5
-    await testRunner.AndAsync("I have entered 3 into the calculator", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line 9
+    await testRunner.GivenAsync("I have entered 3 into the calculator", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 6
+#line 10
     await testRunner.WhenAsync("I press add", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
 #line hidden
-#line 7
+#line 11
     await testRunner.ThenAsync("the result should be 5 on the screen", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
