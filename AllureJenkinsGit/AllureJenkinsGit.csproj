@@ -7,6 +7,9 @@
     <IsTestProject>true</IsTestProject>
     <ReqnrollFeatureFileCodeBehindGeneration>false</ReqnrollFeatureFileCodeBehindGeneration>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\net8.0\allure-results\environment.properties" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Allure.Net.Commons" Version="2.14.1" />

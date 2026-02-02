@@ -18,28 +18,21 @@ namespace AllureJenkinsGit.Future
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Reqnroll", "3.0.0.0")]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [global::NUnit.Framework.TestFixtureAttribute()]
-    [global::NUnit.Framework.DescriptionAttribute("CalculatorAddition")]
+    [global::NUnit.Framework.DescriptionAttribute("Calculator Addition")]
     [global::NUnit.Framework.FixtureLifeCycleAttribute(global::NUnit.Framework.LifeCycle.InstancePerTestCase)]
-    [global::NUnit.Framework.CategoryAttribute("Regression")]
-    [global::NUnit.Framework.CategoryAttribute("Smoke")]
-    [global::NUnit.Framework.CategoryAttribute("Epic:Calculator")]
-    [global::NUnit.Framework.CategoryAttribute("Feature:Addition")]
-    [global::NUnit.Framework.CategoryAttribute("Story:BasicMath")]
-    [global::NUnit.Framework.CategoryAttribute("Severity:critical")]
+    [global::NUnit.Framework.CategoryAttribute("calculator")]
+    [global::NUnit.Framework.CategoryAttribute("regression")]
     public partial class CalculatorAdditionFeature
     {
         
         private global::Reqnroll.ITestRunner testRunner;
         
         private static string[] featureTags = new string[] {
-                "Regression",
-                "Smoke",
-                "Epic:Calculator",
-                "Feature:Addition",
-                "Story:BasicMath",
-                "Severity:critical"};
+                "calculator",
+                "regression"};
         
-        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "Future", "CalculatorAddition", "    As a user\r\n    I want to add two numbers\r\n    So that I can get the sum", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
+        private static global::Reqnroll.FeatureInfo featureInfo = new global::Reqnroll.FeatureInfo(new global::System.Globalization.CultureInfo("en-US"), "Future", "Calculator Addition", "  As a user\r\n  I want to add numbers using the calculator\r\n  So that I can perfor" +
+                "m mathematical calculations", global::Reqnroll.ProgrammingLanguage.CSharp, featureTags, InitializeCucumberMessages());
         
 #line 1 "CalculatorAddition.feature"
 #line hidden
@@ -117,21 +110,27 @@ namespace AllureJenkinsGit.Future
         
         private static global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages InitializeCucumberMessages()
         {
-            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Future/CalculatorAddition.feature.ndjson", 3);
+            return new global::Reqnroll.Formatters.RuntimeSupport.FeatureLevelCucumberMessages("Future/CalculatorAddition.feature.ndjson", 8);
         }
         
         [global::NUnit.Framework.TestAttribute()]
-        [global::NUnit.Framework.DescriptionAttribute("Add two numbers via BDD")]
-        public async global::System.Threading.Tasks.Task AddTwoNumbersViaBDD()
+        [global::NUnit.Framework.DescriptionAttribute("Add two positive numbers")]
+        [global::NUnit.Framework.CategoryAttribute("smoke")]
+        [global::NUnit.Framework.CategoryAttribute("positive")]
+        [global::NUnit.Framework.CategoryAttribute("critical")]
+        public async global::System.Threading.Tasks.Task AddTwoPositiveNumbers()
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = new string[] {
+                    "smoke",
+                    "positive",
+                    "critical"};
             global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
             string pickleIndex = "0";
-            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add two numbers via BDD", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add two positive numbers", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
             string[] tagsOfRule = ((string[])(null));
             global::Reqnroll.RuleInfo ruleInfo = null;
-#line 7
-this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line 8
+  this.ScenarioInitialize(scenarioInfo, ruleInfo);
 #line hidden
             if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -140,17 +139,148 @@ this.ScenarioInitialize(scenarioInfo, ruleInfo);
             else
             {
                 await this.ScenarioStartAsync();
-#line 8
+#line 9
     await testRunner.GivenAsync("I have entered 2 into the calculator", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
 #line hidden
-#line 9
-    await testRunner.GivenAsync("I have entered 3 into the calculator", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
-#line hidden
 #line 10
-    await testRunner.WhenAsync("I press add", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+    await testRunner.AndAsync("I have entered 3 into the calculator", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
 #line hidden
 #line 11
+    await testRunner.WhenAsync("I press add", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 12
     await testRunner.ThenAsync("the result should be 5 on the screen", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Add two negative numbers")]
+        [global::NUnit.Framework.CategoryAttribute("negative-testing")]
+        [global::NUnit.Framework.CategoryAttribute("normal")]
+        public async global::System.Threading.Tasks.Task AddTwoNegativeNumbers()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "negative-testing",
+                    "normal"};
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "1";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add two negative numbers", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 15
+  this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 16
+    await testRunner.GivenAsync("I have entered -2 into the calculator", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 17
+    await testRunner.AndAsync("I have entered -3 into the calculator", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 18
+    await testRunner.WhenAsync("I press add", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 19
+    await testRunner.ThenAsync("the result should be -5 on the screen", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Add with zero")]
+        [global::NUnit.Framework.CategoryAttribute("edge-case")]
+        [global::NUnit.Framework.CategoryAttribute("minor")]
+        public async global::System.Threading.Tasks.Task AddWithZero()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "edge-case",
+                    "minor"};
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            string pickleIndex = "2";
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add with zero", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 22
+  this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 23
+    await testRunner.GivenAsync("I have entered 0 into the calculator", ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 24
+    await testRunner.AndAsync("I have entered 5 into the calculator", ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 25
+    await testRunner.WhenAsync("I press add", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 26
+    await testRunner.ThenAsync("the result should be 5 on the screen", ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
+#line hidden
+            }
+            await this.ScenarioCleanupAsync();
+        }
+        
+        [global::NUnit.Framework.TestAttribute()]
+        [global::NUnit.Framework.DescriptionAttribute("Add multiple number combinations")]
+        [global::NUnit.Framework.CategoryAttribute("data-driven")]
+        [global::NUnit.Framework.CategoryAttribute("normal")]
+        [global::NUnit.Framework.TestCaseAttribute("10", "20", "30", "3", null)]
+        [global::NUnit.Framework.TestCaseAttribute("100", "200", "300", "4", null)]
+        [global::NUnit.Framework.TestCaseAttribute("-5", "5", "0", "5", null)]
+        public async global::System.Threading.Tasks.Task AddMultipleNumberCombinations(string first, string second, string result, string @__pickleIndex, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "data-driven",
+                    "normal"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            global::System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new global::System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("first", first);
+            argumentsOfScenario.Add("second", second);
+            argumentsOfScenario.Add("result", result);
+            string pickleIndex = @__pickleIndex;
+            global::Reqnroll.ScenarioInfo scenarioInfo = new global::Reqnroll.ScenarioInfo("Add multiple number combinations", null, tagsOfScenario, argumentsOfScenario, featureTags, pickleIndex);
+            string[] tagsOfRule = ((string[])(null));
+            global::Reqnroll.RuleInfo ruleInfo = null;
+#line 29
+  this.ScenarioInitialize(scenarioInfo, ruleInfo);
+#line hidden
+            if ((global::Reqnroll.TagHelper.ContainsIgnoreTag(scenarioInfo.CombinedTags) || global::Reqnroll.TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                await testRunner.SkipScenarioAsync();
+            }
+            else
+            {
+                await this.ScenarioStartAsync();
+#line 30
+    await testRunner.GivenAsync(string.Format("I have entered {0} into the calculator", first), ((string)(null)), ((global::Reqnroll.Table)(null)), "Given ");
+#line hidden
+#line 31
+    await testRunner.AndAsync(string.Format("I have entered {0} into the calculator", second), ((string)(null)), ((global::Reqnroll.Table)(null)), "And ");
+#line hidden
+#line 32
+    await testRunner.WhenAsync("I press add", ((string)(null)), ((global::Reqnroll.Table)(null)), "When ");
+#line hidden
+#line 33
+    await testRunner.ThenAsync(string.Format("the result should be {0} on the screen", result), ((string)(null)), ((global::Reqnroll.Table)(null)), "Then ");
 #line hidden
             }
             await this.ScenarioCleanupAsync();
